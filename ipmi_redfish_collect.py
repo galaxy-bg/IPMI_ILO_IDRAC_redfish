@@ -38,12 +38,12 @@ def ping_base_url(ip_address):
 def get_info(base_url):
     
     # Set up the Redfish client
-    ilorest_client = redfish.redfish_client(base_url=base_url, username="hpadmin", password="HP1nv3nt")
+    ilorest_client = redfish.redfish_client(base_url=base_url, username="<ilo_user>", password="<my-ILO-Password>")
     ilorest_client.login()
-    # Retrieve the server information
+    # Retrieve the server information>
     response = ilorest_client.get("/redfish/v1/Systems/1")
 
-    # Get the Manufacturer, Model, and Serial Number from the response
+    # Get the Manufactur, Model, Serial Number and Product Id from the response
     manufacturer = response.dict["Manufacturer"]
     model = response.dict["Model"]
     serial_number = response.dict["SerialNumber"]
