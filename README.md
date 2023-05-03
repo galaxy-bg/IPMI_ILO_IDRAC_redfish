@@ -1,4 +1,4 @@
-# Server Information Retrieval Script
+# Server Information Retrieval from IPMI/ILO via redfish
 
 This Python script uses the Redfish API to retrieve information about a server, including the manufactur, model, serial number, and product ID. 
 
